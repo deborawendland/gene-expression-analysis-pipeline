@@ -42,4 +42,4 @@ vignettes/*.pdf
 */*.pem
 Credentials
 libxml2-2.9.2
-.Data/data_*
+Data/data_*

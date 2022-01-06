@@ -20,5 +20,6 @@ BiocManager::install()
 BiocManager::install("Rsubread")
 BiocManager::install("DESeq2")
 BiocManager::install("transcriptogramer")
+BiocManager::install("pathview")
 
 # BiocManager::install("GEOquery")

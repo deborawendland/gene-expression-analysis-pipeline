@@ -1,5 +1,5 @@
 # FROM staphb/fastqc AS fastqc
-FROM deborawendland/gene-expression-pipeline:data
+FROM deborawendland/gene-expression-pipeline:data-sample
 
 WORKDIR /root
 COPY Analysis/ Analysis/

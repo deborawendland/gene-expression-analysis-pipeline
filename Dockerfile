@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 # FROM staphb/fastqc AS fastqc
-FROM deborawendland/gene-expression-data:data
+FROM deborawendland/gene-expression-pipeline:data
 
 WORKDIR /root
 COPY . .

@@ -3,7 +3,9 @@ FROM openjdk:11
 # FROM deborawendland/gene-expression-data:bash
 
 WORKDIR /root
-COPY . .
+COPY . /Pipeline
+
+WORKDIR /Pipeline
 
 RUN sh DockerConfig/install_dependencies.sh
 RUN sh DockerConfig/install_basic_requirements.sh

@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-RUN_PATH="~/Data/data_SRP316381"
+RUN_PATH="/root/Data/data_SRP316381"
 cd $RUN_PATH
 
-OUTPUT_PATH="~/Analysis/Fastqc"
+OUTPUT_PATH="/root/Analysis/Fastqc"
 mkdir ${OUTPUT_PATH}
 
 for file in $(ls $RUN_PATH)

@@ -14,8 +14,11 @@
 #source("https://bioconductor.org/biocLite.R")
 #biocLite()
 
-if (!require("BiocManager", quietly = TRUE))
+if (!requireNamespace("BiocManager", quietly = TRUE))
     install.packages("BiocManager")
 BiocManager::install()
+BiocManager::install("Rsubread")
+BiocManager::install("DESeq2")
+BiocManager::install("transcriptogramer")
 
 # BiocManager::install("GEOquery")

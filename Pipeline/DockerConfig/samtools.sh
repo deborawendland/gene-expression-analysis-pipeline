@@ -1,1 +1,0 @@
-apt-get install samtool -y

@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM deborawendland/gene-expression-pipeline:full
 
 WORKDIR /root
 COPY . .

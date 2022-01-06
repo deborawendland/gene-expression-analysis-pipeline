@@ -1,2 +1,2 @@
-docker tag analysis-pipeline-data deborawendland/gene-expression-data:dev
-docker push deborawendland/gene-expression-data:dev
+docker tag analysis-pipeline-data deborawendland/gene-expression-data:data
+# docker push deborawendland/gene-expression-data:data

@@ -1,4 +1,4 @@
-FROM deborawendland/gene-expression-pipeline:full
+FROM deborawendland/gene-expression-pipeline:dev
 
 WORKDIR /root
 COPY . .

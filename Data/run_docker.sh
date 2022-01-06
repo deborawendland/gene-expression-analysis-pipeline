@@ -1,6 +1,8 @@
-docker container stop gene-analysis-data
-docker container rm gene-analysis-data
+docker container stop pipeline-data
+docker container rm pipeline-data
 docker container ls -a
-docker build --tag analysis-pipeline-data .
-docker run -it --name gene-analysis-data analysis-pipeline-data
-#docker run -i --name gene-analysis-data analysis-pipeline-data
+docker build --tag pipeline-data .
+docker run -it --name pipeline-data pipeline-data
+#docker run -i --name pipeline-data pipeline-data
+
+docker tag pipeline-data deborawendland/gene-expression-pipeline:data

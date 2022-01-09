@@ -1,0 +1,2 @@
+sh Scripts/install_multiqc.sh
+sh Scripts/install_python_dependencies.sh

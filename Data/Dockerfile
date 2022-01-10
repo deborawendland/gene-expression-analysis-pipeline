@@ -1,10 +1,11 @@
 FROM deborawendland/gene-expression-pipeline:dev
 
 WORKDIR /root
-COPY sample/ Data/sample/
-COPY reference_genome_hg38 Data/reference_genome_hg38
 
-WORKDIR /root/Data/reference_genome_hg38
-RUN tar -xvf genome_assemblies_genome_fasta.tar
+COPY sample/ Data/sample/
+COPY download_reference_genome.sh Data/download_reference_genome.sh
+# COPY reference_genome_hg38 Data/reference_genome_hg38
+
+RUN Data/download_reference_genome.sh
 
 CMD ["bash"]

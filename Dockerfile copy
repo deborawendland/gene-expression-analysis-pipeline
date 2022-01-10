@@ -4,7 +4,8 @@ WORKDIR /root
 COPY Analysis/ Analysis/
 COPY Scripts/ Scripts/
 
-RUN sh Scripts/new_dependencies.sh
+# RUN sh Scripts/new_dependencies.sh
+RUN Scripts/data/download_reference_genome.sh
 
 RUN sh Scripts/run_apps/run_fastqc.sh
 RUN sh Scripts/run_apps/run_trimmomatic.sh

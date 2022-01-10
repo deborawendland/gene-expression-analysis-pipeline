@@ -5,11 +5,7 @@ WORKDIR /root
 # COPY Analysis/ Analysis/
 COPY Scripts/ Scripts/
 
-# retirar no futuro
-# COPY Data/reference_genome_hg38 Data/reference_genome_hg38 
-
-RUN Scripts/data/download_reference_genome.sh
-
+# RUN Scripts/data/download_reference_genome.sh
 # RUN sh Scripts/new_dependencies.sh
 
 # RUN sh Scripts/run_apps/run_fastqc.sh

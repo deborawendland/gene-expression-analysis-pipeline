@@ -38,6 +38,10 @@ vignettes/*.pdf
 # R Environment Variables
 .Renviron
 
-Data/data*
+# Others
+*/*.pem
+Credentials
+libxml2-2.9.2
+Data/data_*
 Data/sample
 Older

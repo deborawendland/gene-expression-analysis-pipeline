@@ -39,9 +39,9 @@ vignettes/*.pdf
 .Renviron
 
 # Others
-*/*.pem
-Credentials
-libxml2-2.9.2
+Older
+
+# Data
 Data/data_*
 Data/sample
-Older
+Data/reference_genome_hg38

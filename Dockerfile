@@ -3,6 +3,7 @@ FROM deborawendland/gene-expression-pipeline:data-sample
 
 WORKDIR /root
 COPY Scripts/ Scripts/
+COPY Pipeline/ Pipeline/
 
 RUN mkdir Analysis
 

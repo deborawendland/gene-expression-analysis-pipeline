@@ -9,8 +9,10 @@ WORKDIR /Pipeline
 
 RUN sh DockerConfig/install_dependencies.sh
 RUN sh DockerConfig/install_basic_requirements.sh
+RUN sh DockerConfig/install_python_dependencies.sh
 RUN sh DockerConfig/install_fastqc.sh
 RUN sh DockerConfig/install_trimmomatic.sh
+RUN sh DockerConfig/install_multiqc.sh
 RUN sh DockerConfig/install_star.sh
 RUN sh DockerConfig/install_samtools.sh
 RUN sh DockerConfig/install_r.sh

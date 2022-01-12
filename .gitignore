@@ -41,6 +41,7 @@ vignettes/*.pdf
 # Others
 Older
 STAR-2.7.9a
+scripts_local/multiqc_report/templates
 
 # Data
 Data/data_*

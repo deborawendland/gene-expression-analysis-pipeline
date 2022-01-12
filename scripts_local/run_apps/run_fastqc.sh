@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-INPUT_PATH="~/gene-expression-analysis-pipeline/Data/sample"
+INPUT_PATH="/home/debs/gene-expression-analysis-pipeline/Data/sample"
 cd $INPUT_PATH
 
-OUTPUT_PATH="~/gene-expression-analysis-pipeline/Analysis/Fastqc"
+OUTPUT_PATH="/home/debs/gene-expression-analysis-pipeline/Analysis/Fastqc"
 mkdir ${OUTPUT_PATH}
 
 for file in $(ls $INPUT_PATH)

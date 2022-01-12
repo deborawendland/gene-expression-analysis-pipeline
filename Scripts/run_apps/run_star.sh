@@ -1,6 +1,6 @@
 REFERENCE_GENOME_FILENAME="GCF_000001405.26_GRCh38_genomic.fna"
 REF_PATH="/root/Data/reference_genome_hg38"
-INPUT_PATH="/root/Data/sample"
+INPUT_PATH="/root/Analysis/Trimmomatic"
 REF_GTF="GCF_000001405.39_GRCh38.p13_genomic.gtf"
 
 OUTPUT_PATH="/root/Data/Analysis/STAR"

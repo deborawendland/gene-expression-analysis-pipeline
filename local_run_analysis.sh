@@ -8,3 +8,4 @@
 # sudo sh scripts_local/run_apps/run_star.sh
 sudo sh scripts_local/run_apps/run_bowtie2.sh
 sudo sh scripts_local/run_apps/run_samtools.sh
+sudo sh scripts_local/run_apps/run_feature_counts.sh

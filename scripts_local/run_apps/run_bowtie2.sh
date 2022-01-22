@@ -1,7 +1,6 @@
 REFERENCE_GENOME_FILENAME="GCF_000001405.26_GRCh38_genomic.fna"
 REF_PATH="/home/debs/gene-expression-analysis-pipeline/Data/reference_genome_hg38"
 INPUT_PATH="/home/debs/gene-expression-analysis-pipeline/Analysis/Trimmomatic"
-# REF_GTF="GCF_000001405.39_GRCh38.p13_genomic.gtf"
 DATABASE="GRCh38"
 
 OUTPUT_PATH="/home/debs/gene-expression-analysis-pipeline/Analysis/Bowtie2"
@@ -15,16 +14,17 @@ mkdir ${OUTPUT_ALIGN}
 # create indexes
 cd /home/debs/gene-expression-analysis-pipeline/scripts_local/installations/bowtie2-2.4.5-linux-x86_64
 
-#./bowtie2-build \
-    #--threads 6 \
-    #${REF_PATH}/${REFERENCE_GENOME_FILENAME} \
-    #${DATABASE} 
+./bowtie2-build \
+    --threads 6 \
+    ${REF_PATH}/${REFERENCE_GENOME_FILENAME} \
+    ${DATABASE} 
 
-# mv *bt2 ${OUTPUT_GEN_DIR}
+mv *bt2 ${OUTPUT_GEN_DIR}
 
-# ./bowtie2-inspect -n ${OUTPUT_GEN_DIR}/${DATABASE} 
+# inspect
+./bowtie2-inspect -n ${OUTPUT_GEN_DIR}/${DATABASE} 
 
-#align
+# align
 cd /home/debs/gene-expression-analysis-pipeline/scripts_local/installations/bowtie2-2.4.5-linux-x86_64
 
 for file in $(ls $INPUT_PATH)

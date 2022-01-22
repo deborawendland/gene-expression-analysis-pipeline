@@ -42,7 +42,7 @@ vignettes/*.pdf
 Older
 STAR-2.7.9a
 scripts_local/multiqc_report/templates
-*/Unconfirmed*
+**Unconfirmed*
 **.zip
 **linux-x86_64
 
@@ -51,3 +51,4 @@ Data/data_*
 Data/sample
 Data/reference_genome_hg38
 Analysis
+Data/GRCh38_noalt_as

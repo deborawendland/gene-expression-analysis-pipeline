@@ -1,6 +1,6 @@
-REFERENCE_GENOME_FILENAME="GCF_000001405.26_GRCh38_genomic.fna"
+REFERENCE_GENOME_FILENAME="GCF_000001405.39_GRCh38.p13_genomic.fna"
 REF_PATH="/home/debs/gene-expression-analysis-pipeline/Data/reference_genome_hg38"
-INPUT_PATH="/home/debs/gene-expression-analysis-pipeline/Analysis/Trimmomatic"
+INPUT_PATH="/home/debs/gene-expression-analysis-pipeline/Analysis/Seqtk"
 DATABASE="GRCh38"
 
 OUTPUT_PATH="/home/debs/gene-expression-analysis-pipeline/Analysis/Bowtie2"
@@ -17,9 +17,7 @@ cd /home/debs/gene-expression-analysis-pipeline/scripts_local/installations/bowt
 ./bowtie2-build \
     --threads 6 \
     ${REF_PATH}/${REFERENCE_GENOME_FILENAME} \
-    ${DATABASE} 
-
-mv *bt2 ${OUTPUT_GEN_DIR}
+    ${OUTPUT_GEN_DIR}/${DATABASE} 
 
 # inspect
 ./bowtie2-inspect -n ${OUTPUT_GEN_DIR}/${DATABASE} 
@@ -32,6 +30,8 @@ do
     SAMPLE=`basename $file`
     echo "Alignment of sample: ${SAMPLE}..."
     ./bowtie2 \
+        --local \
+        --very-fast-local \
         -x ${OUTPUT_GEN_DIR}/${DATABASE} \
         -U ${INPUT_PATH}/${SAMPLE} \
         -S ${OUTPUT_ALIGN}/${SAMPLE%.*}.sam \

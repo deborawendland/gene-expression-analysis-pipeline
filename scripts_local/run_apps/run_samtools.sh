@@ -7,5 +7,5 @@ for file in $(ls $INPUT_PATH)
 do
     SAMPLE=`basename $file`
     echo "Alignment of sample: ${SAMPLE}..."
-    samtools view -bS  ${SAMPLE} > ${SAMPLE%.*}.bam
+    samtools view -bS  ${INPUT_PATH}/${SAMPLE} > ${OUTPUT_PATH}/${SAMPLE%.*}.bam
 done

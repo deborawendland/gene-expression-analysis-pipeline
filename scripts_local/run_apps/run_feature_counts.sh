@@ -1,6 +1,6 @@
 INPUT_PATH="/home/debs/gene-expression-analysis-pipeline/Analysis/Samtools"
 OUTPUT_PATH="/home/debs/gene-expression-analysis-pipeline/Analysis/FeatureCounts"
-REF_GTF="GCF_000001405.39_GRCh38.p13_genomic.gtf"
+REF_GTF="/home/debs/gene-expression-analysis-pipeline/Data/reference_genome_hg38/GCF_000001405.39_GRCh38.p13_genomic.gtf"
 
 mkdir ${OUTPUT_PATH}
 
@@ -9,9 +9,9 @@ do
     SAMPLE=`basename $file`
     echo "Counting features of sample: ${SAMPLE}..."
     featureCounts \
-    -T 4 \
+    -T 6 \
     --verbose \
     -a ${REF_GTF} \
-    -o ${SAMPLE%.*}_counts.txt \
-    ${SAMPLE}
+    -o ${OUTPUT_PATH}/${SAMPLE%.*}_counts.txt \
+    ${INPUT_PATH}/${SAMPLE}
 done

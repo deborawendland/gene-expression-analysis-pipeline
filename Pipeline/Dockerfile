@@ -10,8 +10,10 @@ RUN sh Pipeline/DockerConfig/install_dependencies.sh
 RUN sh Pipeline/DockerConfig/install_python_dependencies.sh
 RUN sh Pipeline/DockerConfig/install_fastqc.sh
 RUN sh Pipeline/DockerConfig/install_trimmomatic.sh
+RUN sh Pipeline/DockerConfig/install_bowtie2.sh
+RUN sh Pipeline/DockerConfig/install_feature_counts.sh
+RUN sh Pipeline/DockerConfig/install_seqtk.sh
 RUN sh Pipeline/DockerConfig/install_multiqc.sh
-RUN sh Pipeline/DockerConfig/install_star.sh
 RUN sh Pipeline/DockerConfig/install_samtools.sh
 RUN sh Pipeline/DockerConfig/install_r.sh
 

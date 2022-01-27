@@ -48,6 +48,7 @@ scripts_local/multiqc_report/templates
 **hisat2-2.2.1
 seqtk
 tophat*
+.Rsubread*
 
 # Data
 Data/data_*

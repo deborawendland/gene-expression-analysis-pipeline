@@ -1,5 +1,5 @@
-INPUT_PATH="/home/debs/gene-expression-analysis-pipeline/Analysis/Bowtie2/alignment"
-OUTPUT_PATH="/home/debs/gene-expression-analysis-pipeline/Analysis/Samtools"
+INPUT_PATH="./Analysis/Bowtie2/alignment"
+OUTPUT_PATH="./Analysis/Samtools"
 
 mkdir ${OUTPUT_PATH}
 

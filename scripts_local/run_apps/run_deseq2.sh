@@ -1,5 +1,5 @@
-COUNTS_PATH="/home/debs/gene-expression-analysis-pipeline/Analysis/FeatureCounts"
-DESEQ_PATH="/home/debs/gene-expression-analysis-pipeline/Analysis/Deseq2"
+COUNTS_PATH="./Analysis/FeatureCounts"
+DESEQ_PATH="./Analysis/Deseq2"
 
 mkdir ${COUNTS_PATH}
 mkdir ${DESEQ_PATH}

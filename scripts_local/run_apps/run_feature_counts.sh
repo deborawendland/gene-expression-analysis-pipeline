@@ -1,4 +1,4 @@
-OUTPUT_PATH="/home/debs/gene-expression-analysis-pipeline/Analysis/FeatureCounts"
+OUTPUT_PATH="./Analysis/FeatureCounts"
 
 mkdir ${OUTPUT_PATH}
 

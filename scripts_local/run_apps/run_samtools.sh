@@ -6,6 +6,8 @@ mkdir ${OUTPUT_PATH}
 for file in $(ls $INPUT_PATH)
 do
     SAMPLE=`basename $file`
-    echo "Alignment of sample: ${SAMPLE}..."
-    samtools view -bS  ${INPUT_PATH}/${SAMPLE} > ${OUTPUT_PATH}/${SAMPLE%.*}.bam
+    echo "Converting sample: ${SAMPLE}..."
+    NAME=${SAMPLE#*S}
+    NAME=${NAME%%_*}
+    samtools view -bS  ${INPUT_PATH}/${SAMPLE} > ${OUTPUT_PATH}/${NAME#_*%_*}.bam
 done

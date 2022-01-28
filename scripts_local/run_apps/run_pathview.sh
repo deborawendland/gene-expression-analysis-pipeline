@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 INPUT_PATH="./Analysis/"
 OUTPUT_PATH="./Analysis/Pathview"
 

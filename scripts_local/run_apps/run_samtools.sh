@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 INPUT_PATH="./Analysis/Bowtie2/alignment"
 OUTPUT_PATH="./Analysis/Samtools"
 

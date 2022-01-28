@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 COUNTS_PATH="./Analysis/FeatureCounts"
 DESEQ_PATH="./Analysis/Deseq2"
 

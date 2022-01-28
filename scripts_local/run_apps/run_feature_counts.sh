@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 OUTPUT_PATH="./Analysis/FeatureCounts"
 
 mkdir ${OUTPUT_PATH}

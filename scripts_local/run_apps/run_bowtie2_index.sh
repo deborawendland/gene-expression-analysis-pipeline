@@ -13,7 +13,7 @@ mkdir ${OUTPUT_PATH}
 mkdir ${OUTPUT_GEN_DIR}
 
 # create indexes    
-if [ -e ${OUTPUT_ALIGN}/${DATABASE}* ]; then
+if [ -e ${OUTPUT_GEN_DIR}/${DATABASE}* ]; then
     echo "Database exists: ${DATABASE}"
 else
     ./bowtie2-2.4.5-linux-x86_64/bowtie2-build \

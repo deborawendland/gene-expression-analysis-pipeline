@@ -12,7 +12,7 @@ do
     SAMPLE=`basename $file`
     
     if [ -e ${OUTPUT_PATH}/${SAMPLE%.*}_fastqc.zip ]; then
-        echo "File exists"
+        echo "File exists: ${SAMPLE%.*}_fastqc.zip"
     else
         fastqc -t 6 ${INPUT_PATH}/${SAMPLE} -o ${OUTPUT_PATH}
     fi

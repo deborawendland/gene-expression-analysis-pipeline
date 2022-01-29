@@ -14,7 +14,7 @@ do
     NAME=${NAME%%_*}
     
     if [ -e ${OUTPUT_PATH}/${NAME}.bam ]; then
-        echo "File exists"
+        echo "File exists: ${NAME}.bam"
     else
         echo "Converting sample: ${SAMPLE}..."
         samtools view -bS  ${INPUT_PATH}/${SAMPLE} > ${OUTPUT_PATH}/${NAME}.bam

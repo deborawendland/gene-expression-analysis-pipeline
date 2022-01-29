@@ -12,7 +12,7 @@ do
     SAMPLE=`basename $file`
    
     if [ -e ${OUTPUT_PATH}/${SAMPLE} ]; then
-        echo "File exists"
+        echo "File exists: ${SAMPLE}"
     else
         java -jar /usr/share/java/trimmomatic-0.39.jar SE \
         -threads 6 \

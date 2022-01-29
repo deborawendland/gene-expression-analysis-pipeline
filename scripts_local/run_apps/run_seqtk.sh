@@ -12,7 +12,7 @@ do
     SAMPLE=`basename $file`
    
     if [ -e ${OUTPUT_PATH}/${SAMPLE} ]; then
-        echo "File exists"
+        echo "File exists: ${SAMPLE}"
     else
         echo "Subsamplig: ${SAMPLE}..."
         seqtk/seqtk sample \

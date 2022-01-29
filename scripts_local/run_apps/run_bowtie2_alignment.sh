@@ -19,7 +19,7 @@ do
     SAMPLE=`basename $file`
     
     if [ -e ${OUTPUT_ALIGN}/${SAMPLE%.*}.sam ]; then
-        echo "File exists"
+        echo "File exists: ${SAMPLE%.*}.sam"
     else
         echo "Alignment of sample: ${SAMPLE}..."
         ./bowtie2-2.4.5-linux-x86_64/bowtie2 \

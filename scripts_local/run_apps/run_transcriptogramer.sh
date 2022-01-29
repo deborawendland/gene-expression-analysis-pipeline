@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "Running Transcriptogramer"
+
 INPUT_PATH="./Analysis/"
 OUTPUT_PATH="./Analysis/Transcriptogramer"
 

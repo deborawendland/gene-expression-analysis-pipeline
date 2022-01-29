@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "Running Samtools"
+
 INPUT_PATH="./Analysis/Bowtie2/alignment"
 OUTPUT_PATH="./Analysis/Samtools"
 
@@ -8,8 +10,13 @@ mkdir ${OUTPUT_PATH}
 for file in $(ls $INPUT_PATH)
 do
     SAMPLE=`basename $file`
-    echo "Converting sample: ${SAMPLE}..."
     NAME=${SAMPLE#*S}
     NAME=${NAME%%_*}
-    samtools view -bS  ${INPUT_PATH}/${SAMPLE} > ${OUTPUT_PATH}/${NAME#_*%_*}.bam
+    
+    if [ -e ${OUTPUT_PATH}/${NAME}.bam ]; then
+        echo "File exists"
+    else
+        echo "Converting sample: ${SAMPLE}..."
+        samtools view -bS  ${INPUT_PATH}/${SAMPLE} > ${OUTPUT_PATH}/${NAME}.bam
+    fi
 done

@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "Running DESeq2"
+
 COUNTS_PATH="./Analysis/FeatureCounts"
 DESEQ_PATH="./Analysis/Deseq2"
 

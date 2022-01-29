@@ -14,7 +14,7 @@ library(Rsubread)
 # DESEQ2
 output.path <- "./Analysis/DESeq2"
 
-metadata <- read.csv("./Data/sample/sample_metadata_index.csv", 
+metadata <- read.csv("./Data/data_SRP316381/SraRunTable.csv", 
                 row.names=1)
 fc <- read.csv("./Analysis/FeatureCounts/counts.csv", 
                 row.names=1)

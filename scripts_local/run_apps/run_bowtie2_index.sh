@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "Running Bowtie2 - indexing"
+
 REFERENCE_GENOME_FILENAME="GCF_000001405.39_GRCh38.p13_genomic.fna"
 REF_PATH="./Data/reference_genome_hg38"
 

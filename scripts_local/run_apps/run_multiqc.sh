@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+echo "Running MultiQC"
+
 FASTQC_PATH="./Analysis/Fastqc"
 TRIMMOMATIC_PATH="./Analysis/Trimmomatic"
 OUTPUT_PATH="./scripts_local/multiqc_report"

@@ -53,6 +53,6 @@ tophat*
 # Data
 Data/data_*
 Data/sample
-Data/reference_genome_hg38
 Analysis
 Data/GRCh38_noalt_as
+Data/reference*

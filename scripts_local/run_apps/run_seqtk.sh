@@ -2,8 +2,8 @@
 
 echo "Running SeqTK - subsampling"
 
-INPUT_PATH="./Analysis/Trimmomatic"
-OUTPUT_PATH="./Analysis/Seqtk"
+INPUT_PATH="./Data/samples"
+OUTPUT_PATH="./Analysis/Seqtk_2"
 
 mkdir ${OUTPUT_PATH}
 
@@ -17,6 +17,6 @@ do
         echo "Subsamplig: ${SAMPLE}..."
         seqtk/seqtk sample \
             -s100 ${INPUT_PATH}/${SAMPLE} \
-            10000 > ${OUTPUT_PATH}/${SAMPLE}
+            1000000 > ${OUTPUT_PATH}/${SAMPLE}
     fi
 done

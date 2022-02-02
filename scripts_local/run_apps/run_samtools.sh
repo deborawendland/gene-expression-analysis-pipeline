@@ -2,8 +2,8 @@
 
 echo "Running Samtools"
 
-INPUT_PATH="./Analysis/Bowtie2/alignment"
-OUTPUT_PATH="./Analysis/Samtools"
+INPUT_PATH="./Analysis/Tophat2/alignment"
+OUTPUT_PATH="./Analysis/Samtools_2"
 
 mkdir ${OUTPUT_PATH}
 

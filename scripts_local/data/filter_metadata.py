@@ -16,4 +16,4 @@ metadata = metadata[cols]
 metadata.loc[metadata['status'] == 'A', ['status']] = 'Asymptomatic'
 metadata.loc[metadata['status'] == 'S', ['status']] = 'Symptomatic'
 
-metadata.to_csv('./Data/data_SRP316381/metadata.csv', encoding='utf-8', index=False)
+metadata.to_csv('./Data/data_SRP316381/metadata_2.csv', encoding='utf-8', index=False)

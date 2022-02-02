@@ -49,10 +49,11 @@ scripts_local/multiqc_report/templates
 seqtk
 tophat*
 .Rsubread*
+temp*
 
 # Data
 Data/data_*
 Data/sample
 Analysis
 Data/GRCh38_noalt_as
-Data/reference*
+Data/*

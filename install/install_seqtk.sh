@@ -1,3 +1,4 @@
 git clone https://github.com/lh3/seqtk.git
-cd seqtk
+mv seqtk ./install/installations/seqtk
+cd ./install/installations/seqtk
 make

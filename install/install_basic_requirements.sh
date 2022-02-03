@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # install and update basic ubuntu packages on docker image 
 apt update -y
 # apt upgrade -y

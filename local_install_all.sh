@@ -1,18 +1,22 @@
-sudo sh Pipeline/DockerConfig/install_basic_requirements.sh
-sudo sh Pipeline/DockerConfig/install_dependencies.sh
-sudo sh Pipeline/DockerConfig/install_python_dependencies.sh
-sudo sh Pipeline/DockerConfig/install_fastqc.sh
-sudo sh Pipeline/DockerConfig/install_trimmomatic.sh
-sudo sh Pipeline/DockerConfig/install_multiqc.sh
-sudo sh Pipeline/DockerConfig/install_samtools.sh
-sudo sh Pipeline/DockerConfig/install_r.sh
-sudo sh Pipeline/DockerConfig/install_bowtie2.sh
-sudo sh Pipeline/DockerConfig/install_feature_counts.sh
-sudo sh Pipeline/DockerConfig/install_seqtk.sh
+INSTALL_PATH="./install"
+INSTALLATIONS_PATH=${INSTALL_PATH}/installations
 
-sudo R < Pipeline/DockerConfig/install_dependencies.R --no-save
-sudo R < Pipeline/DockerConfig/install_biocmanager.R --no-save
-sudo R < Pipeline/DockerConfig/install_rsubread.R --no-save
-sudo R < Pipeline/DockerConfig/install_deseq2.R --no-save
-sudo R < Pipeline/DockerConfig/install_transcriptogramer.R --no-save
-sudo R < Pipeline/DockerConfig/install_pathview.R --no-save
+mkdir ${INSTALLATIONS_PATH}
+
+#!/usr/bin/env bash
+
+sudo sh ./${INSTALL_PATH}/install_basic_requirements.sh
+sudo sh ./${INSTALL_PATH}/install_dependencies.sh
+sudo sh ./${INSTALL_PATH}/install_python_dependencies.sh
+sudo sh ./${INSTALL_PATH}/install_fastqc.sh
+sudo sh ./${INSTALL_PATH}/install_trimmomatic.sh
+sudo sh ./${INSTALL_PATH}/install_samtools.sh
+sudo sh ./${INSTALL_PATH}/install_r.sh
+sudo sh ./${INSTALL_PATH}/install_bowtie2.sh
+sudo sh ./${INSTALL_PATH}/install_feature_counts.sh
+sudo sh ./${INSTALL_PATH}/install_seqtk.sh
+sudo sh ./${INSTALL_PATH}/install_tophat2.sh
+
+sudo R < ./${INSTALL_PATH}/install_dependencies.R --no-save
+
+sudo sh ./${INSTALL_PATH}/create_symbolic_links.sh

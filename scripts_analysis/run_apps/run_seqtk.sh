@@ -15,6 +15,7 @@ do
         echo "File exists: ${SAMPLE}"
     else
         echo "Subsamplig: ${SAMPLE}..."
+        #seqtk sample \
         seqtk/seqtk sample \
             -s100 ${INPUT_PATH}/${SAMPLE} \
             1000000 > ${OUTPUT_PATH}/${SAMPLE}

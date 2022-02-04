@@ -4,7 +4,7 @@ echo "Running MultiQC"
 
 FASTQC_PATH="./Analysis/Fastqc"
 TRIMMOMATIC_PATH="./Analysis/Trimmomatic"
-OUTPUT_PATH="./scripts_local/multiqc_report"
+OUTPUT_PATH="./scripts_analysis/multiqc_report"
 OUTPUT_FILENAME="multiqc_report.html"
 
 multiqc ${FASTQC_PATH} ${TRIMMOMATIC_PATH}

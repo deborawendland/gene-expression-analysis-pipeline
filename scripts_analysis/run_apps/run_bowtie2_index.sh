@@ -16,7 +16,8 @@ mkdir ${OUTPUT_GEN_DIR}
 if [ -e ${OUTPUT_GEN_DIR}/${DATABASE}* ]; then
     echo "Database exists: ${DATABASE}"
 else
-    ./bowtie2-2.4.5-linux-x86_64/bowtie2-build \
+    # ./bowtie2-2.4.5-linux-x86_64/bowtie2-build \
+    bowtie2-build \
         --threads 4 \
         ${REF_PATH}/${REFERENCE_GENOME_FILENAME} \
         ${OUTPUT_GEN_DIR}/${DATABASE} 

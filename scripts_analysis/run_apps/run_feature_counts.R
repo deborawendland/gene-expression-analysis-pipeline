@@ -1,12 +1,8 @@
-if (!requireNamespace("BiocManager", quietly = TRUE))
-install.packages("BiocManager")
-BiocManager::install("Rsubread")
-
 library(Rsubread)
 
 # FeatureCounts
 
-input.bam <- "./Analysis/Samtools_2"
+input.bam <- "./Analysis/Samtools"
 ref.gtf.path <- "./Data/reference_genome_hg38/GCF_000001405.39_GRCh38.p13_genomic.gtf"
 
 bam.files <- list.files(path = input.bam, pattern = ".bam$", full.names = TRUE)

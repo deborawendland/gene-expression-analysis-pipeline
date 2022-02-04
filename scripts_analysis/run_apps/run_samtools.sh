@@ -3,13 +3,14 @@
 echo "Running Samtools"
 
 INPUT_PATH="./Analysis/Tophat2/alignment"
-OUTPUT_PATH="./Analysis/Samtools_2"
+OUTPUT_PATH="./Analysis/Samtools"
+INPUT_FILE="accepted_hits.bam"
 
 mkdir ${OUTPUT_PATH}
 
-for file in $(ls $INPUT_PATH)
+for dir in ${INPUT_PATH}/* ;
 do
-    SAMPLE=`basename $file`
+    SAMPLE=`basename ${dir}`
     NAME=${SAMPLE#*S}
     NAME=${NAME%%_*}
     
@@ -17,6 +18,6 @@ do
         echo "File exists: ${NAME}.bam"
     else
         echo "Converting sample: ${SAMPLE}..."
-        samtools view -bS  ${INPUT_PATH}/${SAMPLE} > ${OUTPUT_PATH}/${NAME}.bam
+        samtools view -bS  ${dir}/${INPUT_FILE} > ${OUTPUT_PATH}/${NAME}.bam
     fi
 done

@@ -41,7 +41,7 @@ vignettes/*.pdf
 # Others
 Older
 STAR-2.7.9a
-scripts_local/multiqc_report/templates
+scripts_analysis/multiqc_report/templates
 **Unconfirmed*
 **.zip
 **linux-x86_64

@@ -15,9 +15,6 @@ rm -r ${TOPHAT_DIR}
 mkdir ${TOPHAT_DIR}
 mkdir ${TOPHAT_DIR_ALING}
 
-# inspect
-# ./bowtie2-2.4.5-linux-x86_64/bowtie2-inspect -n ${INPUT_PATH_GEN_DIR}/${DATABASE} 
-
 # alignment
 for file in $(ls $INPUT_FASTQ_PATH)
 do
@@ -27,6 +24,7 @@ do
         echo "Directory exists: ${SAMPLE%.*}"
     else
         echo "Alignment of sample: ${SAMPLE}..."
+        # tophat2 \
         ./Older/tophat-2.1.1.Linux_x86_64/tophat2 \
             --output-dir ${TOPHAT_DIR_ALING}/${SAMPLE%.*} \
             --library-type fr-firststrand \

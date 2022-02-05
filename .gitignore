@@ -40,20 +40,26 @@ vignettes/*.pdf
 
 # Others
 Older
-STAR-2.7.9a
-scripts_analysis/multiqc_report/templates
 **Unconfirmed*
 **.zip
 **linux-x86_64
 **hisat2-2.2.1
-seqtk
-tophat*
+./seqtk
+./tophat*
 .Rsubread*
 temp*
 
 # Data
-Data/data_*
-Data/sample
-Analysis
-Data/GRCh38_noalt_as
-Data/*
+Data/adapters
+Data/original_data
+Data/reference*
+Data/samples/*.fastq
+
+# Analysis
+Analysis/Bowtie2*
+Analysis/Deseq2*
+Analysis/Fastqc*
+Analysis/Samtools*
+Analysis/Seqtk*
+Analysis/Tophat2
+Analysis/Trimmomatic*

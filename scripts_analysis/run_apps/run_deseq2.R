@@ -62,14 +62,14 @@ rld <- rlog(dds, blind = F)
 head(assay(rld), ) 
 write.csv(assay(rld), file="./Analysis/DESeq2/rlog_values.csv") 
 
+
 #heatmaps
+heatmap.2(assay(rld), scale="row",trace="none", dendrogram="both", col = heat.colors(n = 75), margins = c(8,8)) #funcao para heatmap completo
 
-# heatmap.2(assay(rld), scale="row",trace="none", dendrogram="both", col = heat.colors(n = 75), margins = c(8,8)) #funcao para heatmap completo
-
-# topVarGenes <- head( order( rowVars( assay(rld) ), decreasing=TRUE ), 50 ) #pular funcao se quiser heatmap de todos os genes, alterar o 50 para o numero de genes no ranking
-# heatmap.2( assay(rld)[ topVarGenes, ], scale="row",trace="none", dendrogram="both",col = redgreen(75)) #pular funcao se quiser heatmap de todos os genes
+topVarGenes <- head( order( rowVars( assay(rld) ), decreasing=TRUE ), 50 ) #pular funcao se quiser heatmap de todos os genes, alterar o 50 para o numero de genes no ranking
+heatmap.2( assay(rld)[ topVarGenes, ], scale="row",trace="none", dendrogram="both",col = redgreen(75)) #pular funcao se quiser heatmap de todos os genes
 
 ##distancia entre amostras
-# sampleDists <- as.matrix(dist(t(assay(rld))))
-# head(sampleDists)
-# heatmap.2(as.matrix(sampleDists), scale="row",trace="none", dendrogram="both", col = heat.colors(n = 75), margins = c(8,8)) #funcao para heatmap completo
+sampleDists <- as.matrix(dist(t(assay(rld))))
+head(sampleDists)
+heatmap.2(as.matrix(sampleDists), scale="row",trace="none", dendrogram="both", col = heat.colors(n = 75), margins = c(8,8)) #funcao para heatmap completo

@@ -13,9 +13,6 @@
 # sudo sh ./scripts_analysis/run_apps/run_samtools.sh 
 
 # sudo sh ./scripts_analysis/run_apps/run_feature_counts.sh 
-
-sudo R < ./install/install_dependencies.R --no-save
-
 sudo sh ./scripts_analysis/run_apps/run_deseq2.sh 
 # sudo sh ./scripts_analysis/run_apps/run_transcriptogramer.sh 
 # sudo sh ./scripts_analysis/run_apps/run_pathview.sh 

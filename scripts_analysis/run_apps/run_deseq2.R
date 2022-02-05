@@ -62,7 +62,6 @@ rld <- rlog(dds, blind = F)
 head(assay(rld), ) 
 write.csv(assay(rld), file="./Analysis/DESeq2/rlog_values.csv") 
 
-
 #heatmaps
 heatmap.2(assay(rld), scale="row",trace="none", dendrogram="both", col = heat.colors(n = 75), margins = c(8,8)) #funcao para heatmap completo
 

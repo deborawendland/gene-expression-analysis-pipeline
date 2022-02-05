@@ -14,7 +14,7 @@
 
 # sudo sh ./scripts_analysis/run_apps/run_feature_counts.sh 
 
-sudo sh R < ./install/install_dependencies.R --no-save
+sudo R < ./install/install_dependencies.R --no-save
 
 sudo sh ./scripts_analysis/run_apps/run_deseq2.sh 
 # sudo sh ./scripts_analysis/run_apps/run_transcriptogramer.sh 

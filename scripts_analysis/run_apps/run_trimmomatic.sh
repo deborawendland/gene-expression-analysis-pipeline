@@ -2,10 +2,11 @@
 
 echo "Running Trimmomatic"
 
-# INPUT_PATH="./Data/data_SRP316381"
 INPUT_PATH="./Analysis/Seqtk_2"
-OUTPUT_PATH="./Analysis/Trimmomatic_2"
+OUTPUT_PATH="./Analysis/Trimmomatic"
 mkdir ${OUTPUT_PATH}
+
+. ./data.config
 
 for file in $(ls $INPUT_PATH)
 do
@@ -16,12 +17,12 @@ do
     else
         java -jar /usr/share/java/trimmomatic-0.39.jar \
             SE \
-            -threads 4 \
+            -threads ${n_threads} \
             ${INPUT_PATH}/${SAMPLE} \
             ${OUTPUT_PATH}/${SAMPLE} \
             MINLEN:25 \
             SLIDINGWINDOW:4:20 \
             -phred33 \
-            ILLUMINACLIP:./Data/adapters/adapters:0:0:8
+            ILLUMINACLIP:${adapters_file_path}:0:0:8
     fi
 done

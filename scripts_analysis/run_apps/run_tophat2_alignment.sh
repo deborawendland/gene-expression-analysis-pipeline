@@ -25,7 +25,6 @@ do
         echo "Directory exists: ${SAMPLE%.*}"
     else
         echo "Alignment of sample: ${SAMPLE}..."
-        # ./Older/tophat-2.1.1.Linux_x86_64/tophat2 \
         tophat2 \
             --output-dir ${TOPHAT_DIR_ALING}/${SAMPLE%.*} \
             --library-type ${tophat2_library_type} \

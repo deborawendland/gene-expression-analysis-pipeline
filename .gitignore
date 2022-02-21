@@ -44,10 +44,10 @@ Older
 **.zip
 **linux-x86_64
 **hisat2-2.2.1
-seqtk*
 ./tophat*
 .Rsubread*
 temp*
+seqtk
 
 # Data
 Data/adapters/*

@@ -1,6 +1,6 @@
 mkdir Analysis
 
-sudo sh ./scripts_analysis/data/run_metadata.sh
+# sudo sh ./scripts_analysis/data/run_metadata.sh
 
 sudo sh ./scripts_analysis/run_apps/run_fastqc.sh 
 sudo sh ./scripts_analysis/run_apps/run_seqtk.sh 

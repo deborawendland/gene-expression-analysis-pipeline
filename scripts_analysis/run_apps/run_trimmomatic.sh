@@ -2,7 +2,7 @@
 
 echo "Running Trimmomatic"
 
-INPUT_PATH="./Analysis/Seqtk_2"
+INPUT_PATH="./Analysis/Seqtk"
 OUTPUT_PATH="./Analysis/Trimmomatic"
 mkdir ${OUTPUT_PATH}
 

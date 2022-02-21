@@ -50,10 +50,11 @@ temp*
 seqtk
 
 # Data
-Data/adapters/*
+Data/adapters/adapters
 Data/original_data
 Data/reference*/*
-Data/samples/*
+Data/samples/*.fastq
+Data/samples/metadata.csv
 
 # Analysis
 Analysis/*

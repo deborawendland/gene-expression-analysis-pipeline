@@ -1,0 +1,1 @@
+In this folder you need to add the adapters file for the trimming stage.

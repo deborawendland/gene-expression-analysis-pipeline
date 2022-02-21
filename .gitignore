@@ -39,9 +39,23 @@ vignettes/*.pdf
 .Renviron
 
 # Others
-*/*.pem
-Credentials
-libxml2-2.9.2
-Data/data_*
-Data/sample
 Older
+**Unconfirmed*
+**.zip
+**linux-x86_64
+**hisat2-2.2.1
+./tophat*
+.Rsubread*
+temp*
+seqtk
+
+# Data
+Data/adapters/adapters
+Data/original_data
+Data/reference*/*
+Data/samples/*.fastq
+Data/samples/metadata.csv
+
+# Analysis
+Analysis/*
+seqtk

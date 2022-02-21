@@ -7,3 +7,32 @@ Este repositório é parte integrante do Trabalho de Conclusão de Curso do Curs
 **Coorientadora**: Dra. Patrícia Aline Gröhs Ferrareze<br>
 ___
 
+### Programas implementados no pipeline: 
+- FastQC
+- Seqtk
+- Trimmomatic
+- Bowtie2
+- TopHat2
+- Samtools
+- FeatureCounts
+- DESeq2
+
+## Para instalar: 
+Acesse a pasta referente ao pipeline:<br>
+`cd gene-expression-analysis-pipeline`<br>
+
+Edite o arquivo `./data.config` com as informações correspondentes. <br>
+
+Rode o comando:<br>
+`sudo sh ./local_install_all`
+
+# Para rodar o pipeline: 
+Acesse a pasta referente ao pipeline:<br>
+`cd gene-expression-analysis-pipeline`<br>
+
+Adicione em `./Data/samples` os arquivos .fastq para a análise.<br>
+Adicione em `./Data/samples` o arquivo metadata.csv para a análise.<br>
+Adicione em `./Data/adapters` o arquivo com os adaptadores correspondentes para o processo de trimming.<br>
+
+Rode o comando:<br>
+`sudo sh ./local_run_analysis`

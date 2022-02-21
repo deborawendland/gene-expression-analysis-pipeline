@@ -44,22 +44,16 @@ Older
 **.zip
 **linux-x86_64
 **hisat2-2.2.1
-./seqtk
+seqtk*
 ./tophat*
 .Rsubread*
 temp*
 
 # Data
-Data/adapters
+Data/adapters/*
 Data/original_data
-Data/reference*
-Data/samples/*.fastq
+Data/reference*/*
+Data/samples/*
 
 # Analysis
-Analysis/Bowtie2*
-Analysis/Deseq2*
-Analysis/Fastqc*
-Analysis/Samtools*
-Analysis/Seqtk*
-Analysis/Tophat2
-Analysis/Trimmomatic*
+Analysis/*

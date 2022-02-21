@@ -3,7 +3,7 @@
 echo "Running SeqTK - subsampling"
 
 INPUT_PATH="./Data/samples"
-OUTPUT_PATH="./Analysis/Seqtk_2"
+OUTPUT_PATH="./Analysis/Seqtk"
 
 mkdir ${OUTPUT_PATH}
 
@@ -15,8 +15,8 @@ do
         echo "File exists: ${SAMPLE}"
     else
         echo "Subsamplig: ${SAMPLE}..."
-        #seqtk sample \
-        seqtk/seqtk sample \
+        # seqtk/seqtk sample \
+        seqtk sample \
             -s100 ${INPUT_PATH}/${SAMPLE} \
             1000000 > ${OUTPUT_PATH}/${SAMPLE}
     fi

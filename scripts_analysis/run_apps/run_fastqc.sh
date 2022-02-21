@@ -2,10 +2,11 @@
 
 echo "Running FastQC"
 
-INPUT_PATH="./Data/data_SRP316381"
-# INPUT_PATH="./Data/sample"
+INPUT_PATH="./Data/samples"
 OUTPUT_PATH="./Analysis/Fastqc"
 mkdir ${OUTPUT_PATH}
+
+. ./data.config
 
 for file in $(ls $INPUT_PATH)
 do
@@ -14,6 +15,6 @@ do
     if [ -e ${OUTPUT_PATH}/${SAMPLE%.*}_fastqc.zip ]; then
         echo "File exists: ${SAMPLE%.*}_fastqc.zip"
     else
-        fastqc -t 6 ${INPUT_PATH}/${SAMPLE} -o ${OUTPUT_PATH}
+        fastqc -t ${n_threads} ${INPUT_PATH}/${SAMPLE} -o ${OUTPUT_PATH}
     fi
 done

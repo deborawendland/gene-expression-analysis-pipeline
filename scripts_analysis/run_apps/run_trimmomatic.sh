@@ -4,6 +4,7 @@ echo "Running Trimmomatic"
 
 INPUT_PATH="./Analysis/Seqtk"
 OUTPUT_PATH="./Analysis/Trimmomatic"
+ADAPTERS_PATH="./Data/adapters/adapters"
 mkdir ${OUTPUT_PATH}
 
 . ./data.config
@@ -23,6 +24,6 @@ do
             MINLEN:25 \
             SLIDINGWINDOW:4:20 \
             -phred33 \
-            ILLUMINACLIP:${adapters_file_path}:0:0:8
+            ILLUMINACLIP:${ADAPTERS_PATH}:0:0:8
     fi
 done

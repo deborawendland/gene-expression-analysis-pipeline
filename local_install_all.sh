@@ -32,3 +32,5 @@ echo "\nDownloading reference genomes"
 timestamp
 
 sudo sh ./scripts_analysis/data/download_reference_genome.sh
+
+timestamp

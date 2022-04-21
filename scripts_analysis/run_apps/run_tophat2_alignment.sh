@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-echo "Running Tophat - alignment"
+timestamp() {
+  date +"%T"
+}
+echo "\nRunning Tophat - alignment"
+timestamp
 
 TOPHAT_DIR="./Analysis/Tophat2"
 
@@ -20,11 +24,12 @@ mkdir ${TOPHAT_DIR_ALING}
 for file in $(ls $INPUT_FASTQ_PATH)
 do
     SAMPLE=`basename $file`
+    echo "...Alignment of sample: ${SAMPLE}..."
+    timestamp
     
     if [ -d ${TOPHAT_DIR_ALING}/${SAMPLE%.*} ]; then
-        echo "Directory exists: ${SAMPLE%.*}"
-    else
-        echo "Alignment of sample: ${SAMPLE}..."
+        echo "... ...Directory exists: ${SAMPLE%.*}"
+    else   
         tophat2 \
             --output-dir ${TOPHAT_DIR_ALING}/${SAMPLE%.*} \
             --library-type ${tophat2_library_type} \

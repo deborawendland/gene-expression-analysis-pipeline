@@ -55,7 +55,7 @@ write.table(
   sep=",",
   row.names=FALSE)
 
-  library(DESeq2)
+library(DESeq2)
 
 #rlog transformation
 rld <- rlog(dds, blind = F) 

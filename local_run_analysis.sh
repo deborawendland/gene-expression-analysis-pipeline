@@ -5,7 +5,6 @@ mkdir Analysis
 sudo sh ./scripts_analysis/run_apps/run_fastqc.sh 
 sudo sh ./scripts_analysis/run_apps/run_seqtk.sh 
 sudo sh ./scripts_analysis/run_apps/run_trimmomatic.sh
-sudo sh ./scripts_analysis/run_apps/run_multiqc.sh 
 
 sudo sh ./scripts_analysis/run_apps/run_bowtie2_index.sh 
 sudo sh ./scripts_analysis/run_apps/run_tophat2_alignment.sh 

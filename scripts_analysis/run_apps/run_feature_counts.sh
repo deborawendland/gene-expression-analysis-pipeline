@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-echo "Running FeatureCounts"
+timestamp() {
+  date +"%T"
+}
+echo "\nRunning FeatureCounts"
+timestamp
 
 OUTPUT_PATH="./Analysis/FeatureCounts"
 mkdir ${OUTPUT_PATH}

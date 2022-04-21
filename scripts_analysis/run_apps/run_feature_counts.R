@@ -2,7 +2,7 @@ library(Rsubread)
 
 # FeatureCounts
 
-input.bam <- "./Analysis/Samtools"
+input.bam <- "./Analysis/mapped_samples"
 ref.gtf.path <- "./Data/reference_genome_hg38/GCF_000001405.39_GRCh38.p13_genomic.gtf"
 n.threads <- 4
 

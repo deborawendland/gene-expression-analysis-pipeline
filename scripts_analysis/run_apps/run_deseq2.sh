@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-echo "Running DESeq2"
+timestamp() {
+  date +"%T"
+}
+echo "\nRunning DESeq2"
+timestamp
 
 COUNTS_PATH="./Analysis/FeatureCounts"
 DESEQ_PATH="./Analysis/Deseq2"

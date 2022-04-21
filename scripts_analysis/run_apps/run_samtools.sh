@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
-echo "Running Samtools"
+timestamp() {
+  date +"%T"
+}
+echo "\nRunning Samtools"
+timestamp
 
 INPUT_PATH="./Analysis/Tophat2/alignment"
 OUTPUT_PATH="./Analysis/Samtools"
@@ -13,11 +17,13 @@ do
     SAMPLE=`basename ${dir}`
     NAME=${SAMPLE#*S}
     NAME=${NAME%%_*}
-    
+
+    echo "...Converting sample: ${SAMPLE}"
+    timestamp
+
     if [ -e ${OUTPUT_PATH}/${NAME}.bam ]; then
-        echo "File exists: ${NAME}.bam"
+        echo "... ...File exists: ${NAME}.bam"
     else
-        echo "Converting sample: ${SAMPLE}..."
         samtools view -bS  ${dir}/${INPUT_FILE} > ${OUTPUT_PATH}/${NAME}.bam
     fi
 done

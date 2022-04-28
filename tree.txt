@@ -17,49 +17,6 @@ F:.
 |   |           GRCh38.rev.1.bt2
 |   |           GRCh38.rev.2.bt2
 |   |           
-|   +---Bowtie2_old
-|   |   +---alignment
-|   |   |       519_S2_R1_001.sam
-|   |   |       520_S15_R1_001.sam
-|   |   |       521_S18_R1_001.sam
-|   |   |       522_S33_R1_001.sam
-|   |   |       523_S30_R1_001.sam
-|   |   |       525_S26_R1_001.sam
-|   |   |       526_S6_R1_001.sam
-|   |   |       529_S20_R1_001.sam
-|   |   |       531_S4_R1_001.sam
-|   |   |       537_S19_R1_001.sam
-|   |   |       541_S22_R1_001.sam
-|   |   |       544_S23_R1_001.sam
-|   |   |       545_S8_R1_001.sam
-|   |   |       549_S31_R1_001.sam
-|   |   |       556_S14_R1_001.sam
-|   |   |       557_S12_R1_001.sam
-|   |   |       559_S11_R1_001.sam
-|   |   |       567_S29_R1_001.sam
-|   |   |       568_S13_R1_001.sam
-|   |   |       569_S28_R1_001.sam
-|   |   |       572_S16_R1_001.sam
-|   |   |       574_S32_R1_001.sam
-|   |   |       577_S5_R1_001.sam
-|   |   |       580_S17_R1_001.sam
-|   |   |       583_S27_R1_001.sam
-|   |   |       584_S21_R1_001.sam
-|   |   |       586_S24_R1_001.sam
-|   |   |       588_S9_R1_001.sam
-|   |   |       592_S25_R1_001.sam
-|   |   |       594_S7_R1_001.sam
-|   |   |       595_S10_R1_001.sam
-|   |   |       596_S3_R1_001.sam
-|   |   |       
-|   |   \---genome_dir
-|   |           GRCh38.1.bt2
-|   |           GRCh38.2.bt2
-|   |           GRCh38.3.bt2
-|   |           GRCh38.4.bt2
-|   |           GRCh38.rev.1.bt2
-|   |           GRCh38.rev.2.bt2
-|   |           
 |   +---Deseq2
 |   |       heatmap-sample_distances.pdf
 |   |       heatmap-top-var-genes.pdf
@@ -78,7 +35,7 @@ F:.
 |   |       33_fastqc.zip
 |   |       
 |   +---FeatureCounts
-|   |       counts_gtf.csv
+|   |       counts-gtf.csv
 |   |       
 |   +---Samtools
 |   |       15.bam
@@ -92,7 +49,7 @@ F:.
 |   |       2.fastq
 |   |       33.fastq
 |   |       
-|   +---Tophat2_old
+|   +---Tophat2
 |   |   \---alignment
 |   |       +---15
 |   |       |   |   accepted_hits.bam
@@ -120,79 +77,13 @@ F:.
 |   |       |           tophat.log
 |   |       |           
 |   |       +---18
-|   |       |   |   accepted_hits.bam
-|   |       |   |   align_summary.txt
-|   |       |   |   deletions.bed
-|   |       |   |   insertions.bed
-|   |       |   |   junctions.bed
-|   |       |   |   prep_reads.info
-|   |       |   |   unmapped.bam
-|   |       |   |   
-|   |       |   \---logs
-|   |       |           bowtie.left_kept_reads.log
-|   |       |           bowtie.left_kept_reads_seg1.log
-|   |       |           bowtie.left_kept_reads_seg2.log
-|   |       |           bowtie.left_kept_reads_seg3.log
-|   |       |           bowtie_build.log
-|   |       |           bowtie_inspect_recons.log
-|   |       |           juncs_db.log
-|   |       |           long_spanning_reads.segs.log
-|   |       |           prep_reads.log
-|   |       |           reports.log
-|   |       |           reports.samtools_sort.log0
-|   |       |           run.log
-|   |       |           segment_juncs.log
-|   |       |           tophat.log
+|   |       |   |   ...
 |   |       |           
 |   |       +---2
-|   |       |   |   accepted_hits.bam
-|   |       |   |   align_summary.txt
-|   |       |   |   deletions.bed
-|   |       |   |   insertions.bed
-|   |       |   |   junctions.bed
-|   |       |   |   prep_reads.info
-|   |       |   |   unmapped.bam
-|   |       |   |   
-|   |       |   \---logs
-|   |       |           bowtie.left_kept_reads.log
-|   |       |           bowtie.left_kept_reads_seg1.log
-|   |       |           bowtie.left_kept_reads_seg2.log
-|   |       |           bowtie.left_kept_reads_seg3.log
-|   |       |           bowtie_build.log
-|   |       |           bowtie_inspect_recons.log
-|   |       |           juncs_db.log
-|   |       |           long_spanning_reads.segs.log
-|   |       |           prep_reads.log
-|   |       |           reports.log
-|   |       |           reports.samtools_sort.log0
-|   |       |           run.log
-|   |       |           segment_juncs.log
-|   |       |           tophat.log
+|   |       |   |   ...
 |   |       |           
 |   |       \---33
-|   |           |   accepted_hits.bam
-|   |           |   align_summary.txt
-|   |           |   deletions.bed
-|   |           |   insertions.bed
-|   |           |   junctions.bed
-|   |           |   prep_reads.info
-|   |           |   unmapped.bam
-|   |           |   
-|   |           \---logs
-|   |                   bowtie.left_kept_reads.log
-|   |                   bowtie.left_kept_reads_seg1.log
-|   |                   bowtie.left_kept_reads_seg2.log
-|   |                   bowtie.left_kept_reads_seg3.log
-|   |                   bowtie_build.log
-|   |                   bowtie_inspect_recons.log
-|   |                   juncs_db.log
-|   |                   long_spanning_reads.segs.log
-|   |                   prep_reads.log
-|   |                   reports.log
-|   |                   reports.samtools_sort.log0
-|   |                   run.log
-|   |                   segment_juncs.log
-|   |                   tophat.log
+|   |       |   |   ...
 |   |                   
 |   \---Trimmomatic
 |           15.fastq
@@ -205,50 +96,8 @@ F:.
 |   |       adapters
 |   |       readme.md
 |   |       
-|   +---original_data
-|   |       519_S2_R1_001.fastq
-|   |       520_S15_R1_001.fastq
-|   |       521_S18_R1_001.fastq
-|   |       522_S33_R1_001.fastq
-|   |       523_S30_R1_001.fastq
-|   |       525_S26_R1_001.fastq
-|   |       526_S6_R1_001.fastq
-|   |       529_S20_R1_001.fastq
-|   |       531_S4_R1_001.fastq
-|   |       537_S19_R1_001.fastq
-|   |       541_S22_R1_001.fastq
-|   |       544_S23_R1_001.fastq
-|   |       545_S8_R1_001.fastq
-|   |       549_S31_R1_001.fastq
-|   |       556_S14_R1_001.fastq
-|   |       557_S12_R1_001.fastq
-|   |       559_S11_R1_001.fastq
-|   |       567_S29_R1_001.fastq
-|   |       568_S13_R1_001.fastq
-|   |       569_S28_R1_001.fastq
-|   |       572_S16_R1_001.fastq
-|   |       574_S32_R1_001.fastq
-|   |       577_S5_R1_001.fastq
-|   |       580_S17_R1_001.fastq
-|   |       583_S27_R1_001.fastq
-|   |       584_S21_R1_001.fastq
-|   |       586_S24_R1_001.fastq
-|   |       588_S9_R1_001.fastq
-|   |       592_S25_R1_001.fastq
-|   |       594_S7_R1_001.fastq
-|   |       595_S10_R1_001.fastq
-|   |       596_S3_R1_001.fastq
-|   |       metadata.csv
-|   |       SraRunTable.csv
-|   |       
 |   +---reference_genome_hg38
 |   |       GCF_000001405.39_GRCh38.p13_genomic.fna
-|   |       GCF_000001405.39_GRCh38.p13_genomic.gff
-|   |       GCF_000001405.39_GRCh38.p13_genomic.gtf
-|   |       
-|   +---reference_genome_hg38_old
-|   |       GCF_000001405.39_GRCh38.p13_genomic.fna
-|   |       GCF_000001405.39_GRCh38.p13_genomic.gff
 |   |       GCF_000001405.39_GRCh38.p13_genomic.gtf
 |   |       
 |   \---samples
@@ -279,174 +128,13 @@ F:.
 |   |   
 |   \---installations
 |       +---bowtie2
-|       |   |   AUTHORS
-|       |   |   bowtie2
-|       |   |   bowtie2-align-l
-|       |   |   bowtie2-align-l-debug
-|       |   |   bowtie2-align-s
-|       |   |   bowtie2-align-s-debug
-|       |   |   bowtie2-build
-|       |   |   bowtie2-build-l
-|       |   |   bowtie2-build-l-debug
-|       |   |   bowtie2-build-s
-|       |   |   bowtie2-build-s-debug
-|       |   |   bowtie2-inspect
-|       |   |   bowtie2-inspect-l
-|       |   |   bowtie2-inspect-l-debug
-|       |   |   bowtie2-inspect-s
-|       |   |   bowtie2-inspect-s-debug
-|       |   |   BOWTIE2_VERSION
-|       |   |   LICENSE
-|       |   |   MANUAL
-|       |   |   MANUAL.markdown
-|       |   |   NEWS
-|       |   |   README.md
-|       |   |   TUTORIAL
-|       |   |   
-|       |   +---doc
-|       |   |       manual.html
-|       |   |       README
-|       |   |       style.css
-|       |   |       
-|       |   +---example
-|       |   |   +---index
-|       |   |   |       lambda_virus.1.bt2
-|       |   |   |       lambda_virus.2.bt2
-|       |   |   |       lambda_virus.3.bt2
-|       |   |   |       lambda_virus.4.bt2
-|       |   |   |       lambda_virus.rev.1.bt2
-|       |   |   |       lambda_virus.rev.2.bt2
-|       |   |   |       
-|       |   |   +---reads
-|       |   |   |       combined_reads.bam
-|       |   |   |       longreads.fq
-|       |   |   |       reads_1.fq
-|       |   |   |       reads_2.fq
-|       |   |   |       simulate.pl
-|       |   |   |       
-|       |   |   \---reference
-|       |   |           lambda_virus.fa
-|       |   |           
-|       |   \---scripts
-|       |           bowtie2-hbb.sh
-|       |           convert_quals.pl
-|       |           gen_2b_occ_lookup.pl
-|       |           gen_occ_lookup.pl
-|       |           gen_solqual_lookup.pl
-|       |           infer_fraglen.pl
-|       |           make_a_thaliana_tair.sh
-|       |           make_b_taurus_UMD3.sh
-|       |           make_canFam2.sh
-|       |           make_c_elegans.sh
-|       |           make_d_melanogaster.sh
-|       |           make_e_coli.sh
-|       |           make_hg18.sh
-|       |           make_hg19.sh
-|       |           make_h_sapiens_ncbi36.sh
-|       |           make_h_sapiens_ncbi37.sh
-|       |           make_mm10.sh
-|       |           make_mm9.sh
-|       |           make_m_musculus_ncbi37.sh
-|       |           make_rn4.sh
-|       |           make_s_cerevisiae.sh
+|       |   |   ...
 |       |           
 |       +---seqtk
-|       |   |   .gitignore
-|       |   |   khash.h
-|       |   |   kseq.h
-|       |   |   LICENSE
-|       |   |   Makefile
-|       |   |   README.md
-|       |   |   seqtk
-|       |   |   seqtk.c
-|       |   |   
-|       |   \---.git
-|       |       |   config
-|       |       |   description
-|       |       |   HEAD
-|       |       |   index
-|       |       |   packed-refs
-|       |       |   
-|       |       +---branches
-|       |       +---hooks
-|       |       |       applypatch-msg.sample
-|       |       |       commit-msg.sample
-|       |       |       fsmonitor-watchman.sample
-|       |       |       post-update.sample
-|       |       |       pre-applypatch.sample
-|       |       |       pre-commit.sample
-|       |       |       pre-merge-commit.sample
-|       |       |       pre-push.sample
-|       |       |       pre-rebase.sample
-|       |       |       pre-receive.sample
-|       |       |       prepare-commit-msg.sample
-|       |       |       update.sample
-|       |       |       
-|       |       +---info
-|       |       |       exclude
-|       |       |       
-|       |       +---logs
-|       |       |   |   HEAD
-|       |       |   |   
-|       |       |   \---refs
-|       |       |       +---heads
-|       |       |       |       master
-|       |       |       |       
-|       |       |       \---remotes
-|       |       |           \---origin
-|       |       |                   HEAD
-|       |       |                   
-|       |       +---objects
-|       |       |   +---info
-|       |       |   \---pack
-|       |       |           pack-e2fabee71363aaa92229bef7515fc110dbbea745.idx
-|       |       |           pack-e2fabee71363aaa92229bef7515fc110dbbea745.pack
-|       |       |           
-|       |       \---refs
-|       |           +---heads
-|       |           |       master
-|       |           |       
-|       |           +---remotes
-|       |           |   \---origin
-|       |           |           HEAD
-|       |           |           
-|       |           \---tags
+|       |   |   ...
+|       |           
 |       \---tophat2
-|           |   AUTHORS
-|           |   bam2fastx
-|           |   bam_merge
-|           |   bed_to_juncs
-|           |   contig_to_chr_coords
-|           |   fix_map_ordering
-|           |   gtf_juncs
-|           |   gtf_to_fasta
-|           |   juncs_db
-|           |   LICENSE
-|           |   long_spanning_reads
-|           |   map2gtf
-|           |   prep_reads
-|           |   README
-|           |   samtools_0.1.18
-|           |   sam_juncs
-|           |   segment_juncs
-|           |   sra_to_solid
-|           |   tophat
-|           |   tophat-fusion-post
-|           |   tophat2
-|           |   tophat_reports
-|           |   
-|           +---intervaltree
-|           |       interval.py
-|           |       intervaltree.py
-|           |       node.py
-|           |       __init__.py
-|           |       
-|           \---sortedcontainers
-|                   sorteddict.py
-|                   sortedlist.py
-|                   sortedlistwithkey.py
-|                   sortedset.py
-|                   __init__.py
+|           |   ...
 |                   
 \---scripts_analysis
     +---data

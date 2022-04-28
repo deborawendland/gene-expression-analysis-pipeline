@@ -16,14 +16,15 @@ OUTPUT_GEN_DIR="${OUTPUT_PATH}/genome_dir"
 mkdir ${OUTPUT_PATH}
 mkdir ${OUTPUT_GEN_DIR}
 
-. ./data.config
+N_THREADS=$1
 
 # create indexes    
 if [ -e ${OUTPUT_GEN_DIR}/${DATABASE}* ]; then
     echo "Database exists: ${DATABASE}"
 else
     bowtie2-build \
-        --threads ${n_threads} \
+        --threads ${N_THREADS} \
         ${REF_PATH}/${REFERENCE_GENOME_FILENAME} \
         ${OUTPUT_GEN_DIR}/${DATABASE} 
 fi
+timestamp

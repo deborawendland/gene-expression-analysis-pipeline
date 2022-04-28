@@ -26,3 +26,4 @@ do
             1000000 > ${OUTPUT_PATH}/${SAMPLE}
     fi
 done
+timestamp

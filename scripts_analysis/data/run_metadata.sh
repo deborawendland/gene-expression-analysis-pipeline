@@ -5,7 +5,7 @@ python3 ./scripts_analysis/data/filter_metadata.py
 
 INPUT_PATH="./Data/samples"
 
-for file in ${INPUT_PATH} ;
+for file in $(ls $INPUT_PATH) ;
 do
     SAMPLE=`basename ${file}`
     NAME=${SAMPLE#*S}

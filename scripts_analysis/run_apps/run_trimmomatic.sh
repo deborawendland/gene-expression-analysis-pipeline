@@ -11,7 +11,7 @@ OUTPUT_PATH="./Analysis/Trimmomatic"
 ADAPTERS_PATH="./Data/adapters/adapters"
 mkdir ${OUTPUT_PATH}
 
-. ./data.config
+N_THREADS=$1
 
 for file in $(ls $INPUT_PATH)
 do
@@ -25,7 +25,7 @@ do
     else
         java -jar /usr/share/java/trimmomatic-0.39.jar \
             SE \
-            -threads ${n_threads} \
+            -threads ${N_THREADS} \
             ${INPUT_PATH}/${SAMPLE} \
             ${OUTPUT_PATH}/${SAMPLE} \
             MINLEN:25 \
@@ -34,3 +34,4 @@ do
             ILLUMINACLIP:${ADAPTERS_PATH}:0:0:8
     fi
 done
+timestamp

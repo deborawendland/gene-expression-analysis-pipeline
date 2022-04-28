@@ -18,7 +18,8 @@ TOPHAT_DIR_ALING="${TOPHAT_DIR}/alignment"
 mkdir ${TOPHAT_DIR}
 mkdir ${TOPHAT_DIR_ALING}
 
-. ./data.config
+N_THREADS=$1
+tophat2_library_type=$2
 
 # alignment
 for file in $(ls $INPUT_FASTQ_PATH)
@@ -33,9 +34,10 @@ do
         tophat2 \
             --output-dir ${TOPHAT_DIR_ALING}/${SAMPLE%.*} \
             --library-type ${tophat2_library_type} \
-            --num-threads ${n_threads} \
+            --num-threads ${N_THREADS} \
             --max-multihits 1 \
             ${INPUT_PATH_GEN_DIR}/${DATABASE} \
             ${INPUT_FASTQ_PATH}/${SAMPLE} 
     fi
 done
+timestamp

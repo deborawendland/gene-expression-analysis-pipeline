@@ -15,11 +15,10 @@ mkdir ${OUTPUT_PATH}
 for dir in ${INPUT_PATH}/* ;
 do
     SAMPLE=`basename ${dir}`
-    NAME=${SAMPLE#*S}
-    NAME=${NAME%%_*}
+    NAME=${SAMPLE%*}
 
-    echo "...Converting sample: ${SAMPLE}"
     timestamp
+    echo "...Converting sample: ${SAMPLE}"
 
     if [ -e ${OUTPUT_PATH}/${NAME}.bam ]; then
         echo "... ...File exists: ${NAME}.bam"
@@ -27,3 +26,4 @@ do
         samtools view -bS  ${dir}/${INPUT_FILE} > ${OUTPUT_PATH}/${NAME}.bam
     fi
 done
+timestamp

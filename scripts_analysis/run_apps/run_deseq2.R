@@ -13,7 +13,7 @@ output.path <- "./Analysis/DESeq2"
 
 metadata <- read.csv("./Data/samples/metadata/metadata.csv", 
                 row.names=1)
-fc <- read.csv("./Analysis/FeatureCounts/counts_gtf.csv", 
+fc <- read.csv("./Analysis/FeatureCounts/counts-gtf.csv", 
                 row.names=1)
 
 # metadata <- metadata[,c("status")]

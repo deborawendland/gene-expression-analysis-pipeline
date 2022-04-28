@@ -1,0 +1,156 @@
+Folder PATH listing for volume Seagate Expansion Drive
+Volume serial number is A419-56F4
+F:.
+|   .gitignore
+|   local_install_all.sh
+|   local_run_analysis.sh
+|   README.md
+|   tree.txt
+|   
++---Analysis
+|   +---Bowtie2
+|   |   \---genome_dir
+|   |           GRCh38.1.bt2
+|   |           GRCh38.2.bt2
+|   |           GRCh38.3.bt2
+|   |           GRCh38.4.bt2
+|   |           GRCh38.rev.1.bt2
+|   |           GRCh38.rev.2.bt2
+|   |           
+|   +---Deseq2
+|   |       heatmap-sample_distances.pdf
+|   |       heatmap-top-var-genes.pdf
+|   |       results_gtf.csv
+|   |       rlog_values.csv
+|   |       sample_distances.csv
+|   |       
+|   +---Fastqc
+|   |       15_fastqc.html
+|   |       15_fastqc.zip
+|   |       18_fastqc.html
+|   |       18_fastqc.zip
+|   |       2_fastqc.html
+|   |       2_fastqc.zip
+|   |       33_fastqc.html
+|   |       33_fastqc.zip
+|   |       
+|   +---FeatureCounts
+|   |       counts-gtf.csv
+|   |       
+|   +---Samtools
+|   |       15.bam
+|   |       18.bam
+|   |       2.bam
+|   |       33.bam
+|   |       
+|   +---Seqtk
+|   |       15.fastq
+|   |       18.fastq
+|   |       2.fastq
+|   |       33.fastq
+|   |       
+|   +---Tophat2
+|   |   \---alignment
+|   |       +---15
+|   |       |   |   accepted_hits.bam
+|   |       |   |   align_summary.txt
+|   |       |   |   deletions.bed
+|   |       |   |   insertions.bed
+|   |       |   |   junctions.bed
+|   |       |   |   prep_reads.info
+|   |       |   |   unmapped.bam
+|   |       |   |   
+|   |       |   \---logs
+|   |       |           bowtie.left_kept_reads.log
+|   |       |           bowtie.left_kept_reads_seg1.log
+|   |       |           bowtie.left_kept_reads_seg2.log
+|   |       |           bowtie.left_kept_reads_seg3.log
+|   |       |           bowtie_build.log
+|   |       |           bowtie_inspect_recons.log
+|   |       |           juncs_db.log
+|   |       |           long_spanning_reads.segs.log
+|   |       |           prep_reads.log
+|   |       |           reports.log
+|   |       |           reports.samtools_sort.log0
+|   |       |           run.log
+|   |       |           segment_juncs.log
+|   |       |           tophat.log
+|   |       |           
+|   |       +---18
+|   |       |   |   ...
+|   |       |           
+|   |       +---2
+|   |       |   |   ...
+|   |       |           
+|   |       \---33
+|   |       |   |   ...
+|   |                   
+|   \---Trimmomatic
+|           15.fastq
+|           18.fastq
+|           2.fastq
+|           33.fastq
+|           
++---Data
+|   +---adapters
+|   |       adapters
+|   |       readme.md
+|   |       
+|   +---reference_genome_hg38
+|   |       GCF_000001405.39_GRCh38.p13_genomic.fna
+|   |       GCF_000001405.39_GRCh38.p13_genomic.gtf
+|   |       
+|   \---samples
+|       |   15.fastq
+|       |   18.fastq
+|       |   2.fastq
+|       |   33.fastq
+|       |   readme.md
+|       |   
+|       \---metadata
+|               metadata.csv
+|               SraRunTable.csv
+|               
++---install
+|   |   create_symbolic_links.sh
+|   |   install_basic_requirements.sh
+|   |   install_bowtie2.sh
+|   |   install_dependencies.R
+|   |   install_dependencies.sh
+|   |   install_fastqc.sh
+|   |   install_feature_counts.sh
+|   |   install_python_dependencies.sh
+|   |   install_r.sh
+|   |   install_samtools.sh
+|   |   install_seqtk.sh
+|   |   install_tophat2.sh
+|   |   install_trimmomatic.sh
+|   |   
+|   \---installations
+|       +---bowtie2
+|       |   |   ...
+|       |           
+|       +---seqtk
+|       |   |   ...
+|       |           
+|       \---tophat2
+|           |   ...
+|                   
+\---scripts_analysis
+    +---data
+    |       download_reference_genome.sh
+    |       filter_metadata.py
+    |       run_metadata.sh
+    |       
+    \---run_apps
+            run_bowtie2_index.sh
+            run_deseq2.R
+            run_deseq2.sh
+            run_fastqc.sh
+            run_feature_counts.R
+            run_feature_counts.sh
+            run_samtools.sh
+            run_seqtk.sh
+            run_tophat2_alignment.sh
+            run_trimmomatic.sh
+            

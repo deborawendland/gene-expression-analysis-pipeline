@@ -6,3 +6,4 @@ apt update -y
 apt-get install software-properties-common -y
 apt install wget -y
 apt install vim -y
+apt install git -y

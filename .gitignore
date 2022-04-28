@@ -54,8 +54,8 @@ Data/adapters/adapters
 Data/original_data
 Data/reference*/*
 Data/samples/*.fastq
-Data/samples/metadata.csv
+Data/samples/metadata/metadata.csv
 
 # Analysis
 Analysis/*
-seqtk
+install/installations/*

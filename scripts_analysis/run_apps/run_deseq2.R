@@ -67,6 +67,7 @@ write.csv(assay(rld), file="./Analysis/DESeq2/rlog-values.csv")
 
 topVarGenes <- head( order( rowVars( assay(rld) ), decreasing=TRUE ), 50 ) #pular funcao se quiser heatmap de todos os genes, alterar o 50 para o numero de genes no ranking
 topVarGenes
+write.csv(topVarGenes, file="./Analysis/DESeq2/top-var-genes.csv") 
 pdf("./Analysis/DESeq2/heatmap-top-var-genes.pdf", height=10, width=10)
 heatmap.2( assay(rld)[ topVarGenes, ], scale="row",trace="none", dendrogram="both",col = redgreen(75)) #pular funcao se quiser heatmap de todos os genes
 dev.off()

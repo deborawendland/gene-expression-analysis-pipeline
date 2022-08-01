@@ -6,6 +6,8 @@ Este repositório é parte integrante do Trabalho de Conclusão de Curso do Curs
 **Orientadora**: Profa. Dra. Claudia Elizabeth Thompson<br>
 **Coorientadora**: Dra. Patrícia Aline Gröhs Ferrareze<br>
 ___
+SARS-CoV-2 is a 𝛽-coronavirus associated with the lower respiratory tract. It is responsible for the ongoing COVID-19 pandemic, with more than 549 million cases worldwide. There is no sufficient data about the relationships established between SARS-CoV-2 and the host organism during the infectious process, increasing the difficulty to the development of effective treatments for infected patients. In order to clarify the pathogen-host interaction mechanisms, the analysis of differential gene expression in a given tissue through its transcriptome is needed. The comprehension of the transcriptome is essential to provide evidence of the host immune response dynamics and the regulatory gene networks. To facilitate the research about this topic, an automated transcriptomic analysis pipeline was developed using samples of SARS-CoV-2 infected patients as input. The pipeline includes the following steps: pre-processing, alignment and assembly of sequencing reads, quantification of transcript abundance, differential expression modeling, and visualization of the most differentially expressed genes through heatmaps. 
+___
 
 ### Programas implementados no pipeline: 
 - FastQC
